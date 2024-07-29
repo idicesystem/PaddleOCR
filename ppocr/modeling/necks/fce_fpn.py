@@ -4,17 +4,13 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""
-This code is refer from:
-https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.3/ppdet/modeling/necks/fpn.py
-"""
 
 import paddle.nn as nn
 import paddle.nn.functional as F
@@ -90,7 +86,6 @@ class ConvNormLayer(nn.Layer):
 
 class FCEFPN(nn.Layer):
     """
-    Feature Pyramid Network, see https://arxiv.org/abs/1612.03144
     Args:
         in_channels (list[int]): input channels of each level which can be
             derived from the output shape of backbone by from_config

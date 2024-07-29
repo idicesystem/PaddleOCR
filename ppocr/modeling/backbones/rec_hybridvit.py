@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""
-This code is refer from:
-https://github.com/huggingface/pytorch-image-models/blob/main/timm/models/vision_transformer_hybrid.py
-"""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -71,7 +67,6 @@ class Conv2dAlign(nn.Conv2D):
     """Conv2d with Weight Standardization. Used for BiT ResNet-V2 models.
 
     Paper: `Micro-Batch Training with Batch-Channel Normalization and Weight Standardization` -
-        https://arxiv.org/abs/1903.10520v2
     """
 
     def __init__(

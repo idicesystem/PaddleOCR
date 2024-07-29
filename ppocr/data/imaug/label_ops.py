@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -742,10 +742,6 @@ class TableLabelEncode(AttnLabelEncode):
         return data
 
     def _merge_no_span_structure(self, structure):
-        """
-        This code is refer from:
-        https://github.com/JiaquanYe/TableMASTER-mmocr/blob/master/table_recognition/data_preprocess.py
-        """
         new_structure = []
         i = 0
         while i < len(structure):
@@ -758,10 +754,6 @@ class TableLabelEncode(AttnLabelEncode):
         return new_structure
 
     def _replace_empty_cell_token(self, token_list, cells):
-        """
-        This fun code is refer from:
-        https://github.com/JiaquanYe/TableMASTER-mmocr/blob/master/table_recognition/data_preprocess.py
-        """
 
         bbox_idx = 0
         add_empty_bbox_token_list = []

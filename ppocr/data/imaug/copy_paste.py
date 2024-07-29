@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -147,7 +147,6 @@ def get_intersection(pD, pG):
 
 def rotate_bbox(img, text_polys, angle, scale=1):
     """
-    from https://github.com/WenmuZhou/DBNet.pytorch/blob/master/data_loader/modules/augment.py
     Args:
         img: np.ndarray
         text_polys: np.ndarray N*4*2

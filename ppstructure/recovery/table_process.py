@@ -4,16 +4,13 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#     
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""
-This code is refer from: https://github.com/weizwx/html2docx/blob/master/htmldocx/h2d.py
-"""
 
 import re
 import docx
@@ -62,7 +59,6 @@ def get_cell_html(soup):
 
 
 def delete_paragraph(paragraph):
-    # https://github.com/python-openxml/python-docx/issues/33#issuecomment-77661907
     p = paragraph._element
     p.getparent().remove(p)
     p._p = p._element = None
@@ -222,8 +218,6 @@ class HtmlToDocx(HTMLParser):
             delete_paragraph(unwanted_paragraph)
         self.set_initial_attrs(cell)
         self.run_process(html)
-        # cells must end with a paragraph or will get message about corrupt file
-        # https://stackoverflow.com/a/29287121
         if not self.doc.paragraphs:
             self.doc.add_paragraph("")
 
@@ -299,9 +293,6 @@ class HtmlToDocx(HTMLParser):
             self.paragraph = self.doc.add_paragraph()
             self.apply_paragraph_style()
 
-        # There can only be one nested link in a valid html document
-        # You cannot have interactive content in an A tag, this includes links
-        # https://html.spec.whatwg.org/#interactive-content
         link = self.tags.get("a")
         if link:
             self.handle_link(link["href"], data)

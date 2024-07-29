@@ -1,8 +1,3 @@
-"""
-Locality aware nms.
-This code is refered from: https://github.com/songdejia/EAST/blob/master/locality_aware_nms.py
-"""
-
 import numpy as np
 from shapely.geometry import Polygon
 

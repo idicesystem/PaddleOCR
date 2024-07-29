@@ -1,6 +1,4 @@
 
-// This code is refer from:
-// https://github.com/open-mmlab/mmcv/blob/master/mmcv/ops/csrc/pytorch/cpu/roi_align_rotated.cpp
 
 #include <cassert>
 #include <cmath>

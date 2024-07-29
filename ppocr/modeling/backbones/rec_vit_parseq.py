@@ -4,18 +4,13 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-"""
-This code is refer from:
-https://github.com/PaddlePaddle/PaddleClas/blob/release%2F2.5/ppcls/arch/backbone/model_zoo/vision_transformer.py
-"""
 
 from collections.abc import Callable
 
@@ -38,7 +33,6 @@ def to_2tuple(x):
 def drop_path(x, drop_prob=0.0, training=False):
     """Drop paths (Stochastic Depth) per sample (when applied in main path of residual blocks).
     the original name is misleading as 'Drop Connect' is a different form of dropout in a separate paper...
-    See discussion: https://github.com/tensorflow/tpu/issues/494#issuecomment-532968956 ...
     """
     if drop_prob == 0.0 or not training:
         return x

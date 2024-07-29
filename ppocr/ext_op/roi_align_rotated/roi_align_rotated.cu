@@ -1,6 +1,4 @@
 
-// This code is refer from:
-// https://github.com/open-mmlab/mmcv/blob/master/mmcv/ops/csrc/common/cuda/roi_align_rotated_cuda_kernel.cuh
 
 #include <cassert>
 #include <cmath>

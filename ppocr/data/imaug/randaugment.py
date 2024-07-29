@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -47,7 +47,6 @@ class RawRandAugment(object):
             "invert": 0,
         }
 
-        # from https://stackoverflow.com/questions/5252170/
         # specify-image-filling-color-when-rotating-in-python-with-pil-and-setting-expand
         def rotate_with_fill(img, magnitude):
             rot = img.convert("RGBA").rotate(magnitude)

@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#     
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -102,10 +102,6 @@ def add_profiler_step(options_str=None):
 
     if _profiler_options is None:
         _profiler_options = ProfilerOptions(options_str)
-    # profile : https://www.paddlepaddle.org.cn/documentation/docs/zh/guides/performance_improving/profiling_model.html#chakanxingnengshujudetongjibiaodan
-    # timer_only = True  only the model's throughput and time overhead are displayed
-    # timer_only = False calling summary can print a statistical form that presents performance data from different perspectives.
-    # timer_only = False the output Timeline information can be found in the profiler_log directory
     if _prof is None:
         _timer_only = str(_profiler_options["timer_only"]) == str(True)
         _prof = profiler.Profiler(

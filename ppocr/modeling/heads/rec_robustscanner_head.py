@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -12,11 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""
-This code is refer from:
-https://github.com/open-mmlab/mmocr/blob/main/mmocr/models/textrecog/encoders/channel_reduction_encoder.py
-https://github.com/open-mmlab/mmocr/blob/main/mmocr/models/textrecog/decoders/robust_scanner_decoder.py
-"""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -127,7 +122,6 @@ class SequenceAttentionDecoder(BaseDecoder):
     """Sequence attention decoder for RobustScanner.
 
     RobustScanner: `RobustScanner: Dynamically Enhancing Positional Clues for
-    Robust Text Recognition <https://arxiv.org/abs/2007.07542>`_
 
     Args:
         num_classes (int): Number of output classes :math:`C`.
@@ -358,7 +352,6 @@ class PositionAttentionDecoder(BaseDecoder):
     """Position attention decoder for RobustScanner.
 
     RobustScanner: `RobustScanner: Dynamically Enhancing Positional Clues for
-    Robust Text Recognition <https://arxiv.org/abs/2007.07542>`_
 
     Args:
         num_classes (int): Number of output classes :math:`C`.
@@ -525,7 +518,6 @@ class RobustScannerDecoder(BaseDecoder):
     """Decoder for RobustScanner.
 
     RobustScanner: `RobustScanner: Dynamically Enhancing Positional Clues for
-    Robust Text Recognition <https://arxiv.org/abs/2007.07542>`_
 
     Args:
         num_classes (int): Number of output classes :math:`C`.

@@ -4,17 +4,13 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""
-This code is refer from:
-https://github.com/open-mmlab/mmocr/blob/main/mmocr/models/textdet/dense_heads/fce_head.py
-"""
 
 from paddle import nn
 from paddle import ParamAttr
@@ -34,8 +30,6 @@ class FCEHead(nn.Layer):
     """The class for implementing FCENet head.
     FCENet(CVPR2021): Fourier Contour Embedding for Arbitrary-shaped Text
     Detection.
-
-    [https://arxiv.org/abs/2104.10442]
 
     Args:
         in_channels (int): The number of input channels.

@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -71,10 +71,6 @@ class MakePseGt(object):
         return data
 
     def generate_kernel(self, img_size, shrink_ratio, text_polys, ignore_tags=None):
-        """
-        Refer to part of the code:
-        https://github.com/open-mmlab/mmocr/blob/main/mmocr/datasets/pipelines/textdet_targets/base_textdet_targets.py
-        """
 
         h, w = img_size
         text_kernel = np.zeros((h, w), dtype=np.float32)

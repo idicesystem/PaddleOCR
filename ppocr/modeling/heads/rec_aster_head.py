@@ -4,17 +4,14 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""
-This code is refer from:
-https://github.com/ayumiymk/aster.pytorch/blob/master/lib/models/attention_recognition_head.py
-"""
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -156,7 +153,6 @@ class AttentionRecognitionHead(nn.Layer):
             output = paddle.tile(tensor, repeat_dims)
             return output
 
-        # https://github.com/IBM/pytorch-seq2seq/blob/fede87655ddce6c94b38886089e05321dc9802af/seq2seq/models/TopKDecoder.py
         batch_size, l, d = x.shape
         x = paddle.tile(
             paddle.transpose(x.unsqueeze(1), perm=[1, 0, 2, 3]), [beam_width, 1, 1, 1]

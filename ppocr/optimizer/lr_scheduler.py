@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,7 +22,6 @@ class CyclicalCosineDecay(LRScheduler):
     ):
         """
         Cyclical cosine learning rate decay
-        A learning rate which can be referred in https://arxiv.org/pdf/2012.12645.pdf
         Args:
             learning rate(float): learning rate
             T_max(int): maximum epoch num
@@ -46,11 +45,6 @@ class CyclicalCosineDecay(LRScheduler):
 
 
 class OneCycleDecay(LRScheduler):
-    """
-    One Cycle learning rate decay
-    A learning rate which can be referred in https://arxiv.org/abs/1708.07120
-    Code refered in https://pytorch.org/docs/stable/_modules/torch/optim/lr_scheduler.html#OneCycleLR
-    """
 
     def __init__(
         self,

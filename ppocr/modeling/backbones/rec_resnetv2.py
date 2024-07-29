@@ -4,7 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""
-This code is refer from:
-https://github.com/huggingface/pytorch-image-models/blob/main/timm/models/resnetv2.py
-"""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -136,7 +132,6 @@ class StdConv2d(nn.Conv2D):
     """Conv2d with Weight Standardization. Used for BiT ResNet-V2 models.
 
     Paper: `Micro-Batch Training with Batch-Channel Normalization and Weight Standardization` -
-        https://arxiv.org/abs/1903.10520v2
     """
 
     def __init__(
@@ -744,7 +739,6 @@ class PreActBottleneck(nn.Layer):
     """Pre-activation (v2) bottleneck block.
 
     Follows the implementation of "Identity Mappings in Deep Residual Networks":
-    https://github.com/KaimingHe/resnet-1k-layers/blob/master/resnet-pre-act.lua
 
     Except it puts the stride on 3x3 conv when available.
     """

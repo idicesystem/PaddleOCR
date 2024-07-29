@@ -4,17 +4,13 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#    http://www.apache.org/licenses/LICENSE-2.0
+#    
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""
-This code is refer from:
-https://github.com/open-mmlab/mmocr/blob/main/mmocr/models/textdet/modules/local_graph.py
-"""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -69,7 +65,6 @@ def euclidean_distance_matrix(A, B):
 
 def feature_embedding(input_feats, out_feat_len):
     """Embed features. This code was partially adapted from
-    https://github.com/GXYM/DRRG licensed under the MIT license.
 
     Args:
         input_feats (ndarray): The input features of shape (N, d), where N is
